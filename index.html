@@ -21,15 +21,21 @@
     <script src="script.js"></script>
   </head>
   <body>
+    <!-- Main Container -->
     <div class="container">
+      <!-- Toolbar Section -->
       <div class="toolbar">
+        <!-- Top Toolbar -->
         <div class="head">
+          <!-- File Name Input -->
           <input
             type="text"
             name="FileName"
             id="fileName"
             placeholder="File Name"
           />
+
+          <!-- File Options -->
           <select>
             <option value="" selected hidden>File</option>
             <option value="">New File</option>
@@ -37,6 +43,7 @@
             <option value="">Save as pdf</option>
           </select>
 
+          <!-- Text Format Options -->
           <select name="" id="">
             <option value="">Formate</option>
             <option value="">H1</option>
@@ -48,6 +55,7 @@
             <option value="">Paragraph</option>
           </select>
 
+          <!-- Font Size Options -->
           <select>
             <option value="" selected hidden>Font Size</option>
             <option value="">Extra Small</option>
@@ -58,67 +66,86 @@
             <option value="">Big</option>
           </select>
 
+          <!-- Text Color Picker -->
           <div class="color">
             <span>Color</span>
             <input type="color" />
           </div>
 
+          <!-- Background Color Picker -->
           <div class="color">
             <span>Background</span>
             <input type="color" />
           </div>
         </div>
 
+        <!-- Button Toolbar -->
         <div class="btn-toolbar">
+          <!-- Undo Button -->
           <button onclick="formatDoc('undo')">
             <i class="fa-solid fa-rotate-left"></i>
           </button>
+          <!-- Redo Button -->
           <button onclick="formatDoc('redo')">
             <i class="fa-solid fa-rotate-right"></i>
           </button>
+          <!-- Bold Button -->
           <button onclick="formatDoc('bold')">
             <i class="fa-solid fa-bold"></i>
           </button>
+          <!-- Underline Button -->
           <button onclick="formatDoc('underline')">
             <i class="fa-solid fa-underline"></i>
           </button>
+          <!-- Italic Button -->
           <button onclick="formatDoc('italic')">
             <i class="fa-solid fa-italic"></i>
           </button>
-          <button onclick="formatDoc('strikethrough')">
+          <!-- StrikeThrough Button -->
+          <button onclick="formatDoc('strikeThrough')">
             <i class="fa-solid fa-strikethrough"></i>
           </button>
+          <!-- Align Left -->
           <button onclick="formatDoc('justifyLeft')">
             <i class="fa-solid fa-align-left"></i>
           </button>
+          <!-- Align Center -->
           <button onclick="formatDoc('justifyCenter')">
             <i class="fa-solid fa-align-center"></i>
           </button>
+          <!-- Align Right -->
           <button onclick="formatDoc('justifyRight')">
             <i class="fa-solid fa-align-right"></i>
           </button>
+          <!-- Justify Content -->
           <button onclick="formatDoc('justifyFull')">
             <i class="fa-solid fa-align-justify"></i>
           </button>
+          <!-- Ordered List -->
           <button onclick="formatDoc('insertOrderedList')">
             <i class="fa-solid fa-list-ol"></i>
           </button>
+          <!-- Unordered List -->
           <button onclick="formatDoc('insertUnorderedList')">
             <i class="fa-solid fa-list"></i>
           </button>
+          <!-- Add Link -->
           <button onclick="handleAddLink()">
             <i class="fa-solid fa-link"></i>
           </button>
+          <!-- Remove Link -->
           <button onclick="formatDoc('unlink')">
             <i class="fa-solid fa-link-slash"></i>
           </button>
+          <!-- Code Block -->
           <button onclick="formatDoc('')">
             <i class="fa-solid fa-code"></i>
           </button>
         </div>
       </div>
 
-      <div id="content" contenteditable="true"></div>
+      <!-- Editable Content Area -->
+      <div id="content" contenteditable="true" data-placeholder="Type something here..."></div>
     </div>
   </body>
 </html>
