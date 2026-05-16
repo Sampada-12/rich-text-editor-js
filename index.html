@@ -18,7 +18,9 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+
+
+    <script src="script.js" ></script>
   </head>
   <body>
     <!-- Main Container -->
@@ -44,7 +46,12 @@
           </select>
 
           <!-- Text Format Options -->
-          <select onchange="formatDoc('formatBlock',this.value); this.selectedIndex=0">
+          <select
+            onchange="
+              formatDoc('formatBlock', this.value);
+              this.selectedIndex = 0;
+            "
+          >
             <option value="">Formate</option>
             <option value="h1">H1</option>
             <option value="h2">H2</option>
@@ -56,7 +63,12 @@
           </select>
 
           <!-- Font Size Options -->
-          <select onchange=" formatDoc('fontSize', this.value);   this.selectedIndex = 0; ">
+          <select
+            onchange="
+              formatDoc('fontSize', this.value);
+              this.selectedIndex = 0;
+            "
+          >
             <option value="" selected hidden>Font Size</option>
             <option value="1">Extra Small</option>
             <option value="2">Small</option>
@@ -69,13 +81,25 @@
           <!-- Text Color Picker -->
           <div class="color">
             <span>Color</span>
-            <input type="color" oninput="formatDoc('foreColor',this.value);this.value='#111'"/>
+            <input
+              type="color"
+              oninput="
+                formatDoc('foreColor', this.value)
+                // this.value = '#111111';
+              "
+            />
           </div>
 
           <!-- Background Color Picker -->
           <div class="color">
             <span>Background</span>
-            <input type="color" oninput="formatDoc('hiliteColor',this.value);this.value='#111'"/>
+            <input
+              type="color"
+              oninput="
+                formatDoc('hiliteColor', this.value)
+                // this.value = '#111111';
+              "
+            />
           </div>
         </div>
 
@@ -138,7 +162,7 @@
             <i class="fa-solid fa-link-slash"></i>
           </button>
           <!-- Code Block -->
-          <button onclick="formatDoc('')">
+          <button data-active="false" id="show-code">
             <i class="fa-solid fa-code"></i>
           </button>
         </div>
