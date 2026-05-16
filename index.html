@@ -19,6 +19,9 @@
     />
     <link rel="stylesheet" href="style.css" />
 
+    <!-- html2pdf library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
     <!-- 
 defer loads JavaScript after HTML is fully loaded
 
@@ -52,7 +55,7 @@ With defer:
           />
 
           <!-- File Options -->
-          <select  onchange="handleFileExport(this.value)">
+          <select onchange="handleFileExport(this.value)">
             <option value="" selected hidden>File</option>
             <option value="new">New File</option>
             <option value="txt">Save as text</option>
