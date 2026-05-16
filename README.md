@@ -1,17 +1,23 @@
 # Rich Text Editor
 
-A simple and responsive Rich Text Editor built using HTML, CSS, JavaScript, and React.js.  
-This editor allows users to format text like bold, italic, underline, headings, lists, and more.
+A custom Rich Text Editor built using HTML, CSS, and JavaScript.
+
+This editor allows users to format text with features like bold, italic, underline, alignment, lists, links, code view, and file export functionality.
 
 ## Features
 
 - Bold, Italic, Underline
+- StrikeThrough
 - Text Alignment
 - Font Size Change
-- Headings
+- Headings & Paragraph Formatting
 - Ordered & Unordered Lists
-- Add Links
-- Responsive Design
+- Add / Remove Links
+- Text Color & Background Color
+- Code View Mode
+- Export as TXT File
+- Export as PDF
+- Responsive Toolbar
 - Live Text Editing
 
 ## Technologies Used
@@ -19,4 +25,51 @@ This editor allows users to format text like bold, italic, underline, headings, 
 - HTML5
 - CSS3
 - JavaScript
-- React.js
+- Font Awesome
+- html2pdf.js
+
+## How to Run
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/Sampada-12/rich-text-editor-js.git
+```
+
+2. Open the project folder
+
+3. Run `index.html` in browser
+
+## Project Structure
+
+```text
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+```
+
+## Challenges Faced
+
+- Managing contenteditable behavior
+- Making links clickable inside editor
+- Creating reusable formatting functions
+- Implementing code view mode
+- Exporting editor content as PDF and TXT
+
+## Future Improvements
+
+- Keyboard shortcuts
+- Image upload
+- Dark mode
+- Auto save using LocalStorage
+- Active toolbar states
+- Replace deprecated execCommand API
+
+## Live Demo
+
+Add your Netlify deployment link here.
+
+## Author
+
+Sampada Jadhav
