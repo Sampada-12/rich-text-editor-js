@@ -24,17 +24,34 @@ const handleAddLink = () => {
   formatDoc("createLink", url);
 };
 
+
+// Select editable content area
 let content = document.getElementById("content");
+
+// Detect when mouse enters editor area
 content.addEventListener("mouseenter", () => {
+
+  // Select all anchor(link) tags inside editor
   let anchors = content.querySelectorAll("a");
 
+  // Loop through all links
   anchors.forEach((anchor) => {
+
+    // Detect when mouse enters link
     anchor.addEventListener("mouseenter", (e) => {
+
+      // Open link in new tab
       anchor.setAttribute("target", "_blank");
+
+      // Disable editor temporarily
+      // So links become clickable
       content.setAttribute("contentEditable", "false");
     });
 
+    // Detect when mouse leaves link
     anchor.addEventListener("mouseleave", (e) => {
+
+      // Enable editor again
       content.setAttribute("contentEditable", "true");
     });
   });
