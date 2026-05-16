@@ -19,8 +19,22 @@
     />
     <link rel="stylesheet" href="style.css" />
 
+    <!-- 
+defer loads JavaScript after HTML is fully loaded
 
-    <script src="script.js" ></script>
+Why use defer?
+- Prevents null errors
+- Ensures elements exist before JS runs
+- Improves page loading performance
+
+Without defer:
+JS may run before HTML elements are created
+
+With defer:
+1. HTML loads first
+2. Then JavaScript executes
+-->
+    <script src="script.js" defer></script>
   </head>
   <body>
     <!-- Main Container -->
