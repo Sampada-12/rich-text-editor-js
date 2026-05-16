@@ -41,6 +41,13 @@ body {
           transition: border-color 0.2s ease;
         }
 
+        #fileName:hover {
+					border-color: #4a90e2;
+				}
+				#fileName:focus {
+					border-color: #4a90e2;
+				}
+
         select {
           background: #fff;
           border: 1px solid #e0e0e0;
@@ -51,6 +58,9 @@ body {
           font-size: 14px;
           transition: all 0.2s ease;
         }
+        select:hover {
+					border-color: #4a90e2;
+				}
         .color {
           background: #fff;
           border: 1px solid #e0e0e0;
@@ -77,6 +87,9 @@ body {
             border-radius: 4px;
           }
         }
+        .color:hover {
+					border-color: #4a90e2;
+				}
       }
 
       .btn-toolbar {
@@ -99,6 +112,9 @@ body {
           color: #333;
           transition: all 0.2s ease;
         }
+        button:hover {
+					border-color: #4a90e2;
+				}
       }
     }
 
@@ -113,4 +129,10 @@ body {
       color: #333;
     }
   }
+}
+
+#show-code[data-active="true"] {
+	background: #4a90e2;
+	color: white;
+	border-color: #4a90e2;
 }
