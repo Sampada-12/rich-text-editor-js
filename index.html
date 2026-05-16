@@ -52,11 +52,11 @@ With defer:
           />
 
           <!-- File Options -->
-          <select>
+          <select  onchange="handleFileExport(this.value)">
             <option value="" selected hidden>File</option>
-            <option value="">New File</option>
-            <option value="">Save as text</option>
-            <option value="">Save as pdf</option>
+            <option value="new">New File</option>
+            <option value="txt">Save as text</option>
+            <option value="pdf">Save as pdf</option>
           </select>
 
           <!-- Text Format Options -->

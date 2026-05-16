@@ -58,6 +58,55 @@ content.addEventListener("mouseenter", () => {
 });
 
 
+// Select file name input
+let fileName = document.getElementById("fileName");
+
+// Function to handle file actions
+const handleFileExport = (value) => {
+
+	// Create new file
+	if (value === "new") {
+
+		// Clear editor content
+		content.innerHTML = "";
+
+		// Reset file name
+		fileName.value = "File Name";
+	}
+
+	// Export content as PDF
+	if (value === "pdf") {
+
+		// Convert editor content into PDF
+		html2pdf(content).save(fileName.value);
+	}
+
+	// Export content as Text File
+	if (value === "txt") {
+
+		// Get plain text from editor
+		const extractedText = content.innerText;
+
+		// Create text file blob
+		const blob = new Blob([extractedText]);
+
+		// Generate temporary file URL
+		const url = URL.createObjectURL(blob);
+
+		// Create temporary anchor tag
+		const a = document.createElement("a");
+
+		// Set download URL
+		a.href = url;
+
+		// Set file name
+		a.download = fileName.value + ".txt";
+
+		// Trigger automatic download
+		a.click();
+	}
+};
+
 // Track code mode state
 let active = false;
 // Select "Show Code" button
