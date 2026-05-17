@@ -1,3 +1,6 @@
+/* =========================
+   Global Reset
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +8,9 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* =========================
+   Body Styling
+========================= */
 body {
   background: #f0f2f5;
   display: flex;
@@ -13,6 +19,9 @@ body {
   min-height: 100vh;
   padding: 20px;
 
+  /* =========================
+     Main Container
+  ========================= */
   .container {
     max-width: 991px;
     width: 100%;
@@ -21,16 +30,24 @@ body {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
+    /* =========================
+       Toolbar Section
+    ========================= */
     .toolbar {
       padding: 20px;
       background: #ffffff;
       border-bottom: 1px solid #eaeaea;
+
+      /* =========================
+         Top Toolbar Controls
+      ========================= */
       .head {
         display: flex;
         gap: 12px;
         margin-bottom: 12px;
         flex-wrap: wrap;
 
+        /* File Name Input */
         #fileName {
           max-width: 120px;
           padding: 8px 12px;
@@ -41,13 +58,17 @@ body {
           transition: border-color 0.2s ease;
         }
 
+        /* Hover Effect */
         #fileName:hover {
-					border-color: #4a90e2;
-				}
-				#fileName:focus {
-					border-color: #4a90e2;
-				}
+          border-color: #4a90e2;
+        }
 
+        /* Focus Effect */
+        #fileName:focus {
+          border-color: #4a90e2;
+        }
+
+        /* Dropdown Styling */
         select {
           background: #fff;
           border: 1px solid #e0e0e0;
@@ -58,9 +79,15 @@ body {
           font-size: 14px;
           transition: all 0.2s ease;
         }
+
+        /* Dropdown Hover */
         select:hover {
-					border-color: #4a90e2;
-				}
+          border-color: #4a90e2;
+        }
+
+        /* =========================
+           Color Picker Section
+        ========================= */
         .color {
           background: #fff;
           border: 1px solid #e0e0e0;
@@ -73,10 +100,13 @@ body {
           padding: 0 12px;
           transition: all 0.2s ease;
 
+          /* Color Label */
           span {
             font-size: 14px;
             color: #333;
           }
+
+          /* Color Input */
           input {
             border: none;
             padding: 0;
@@ -87,17 +117,23 @@ body {
             border-radius: 4px;
           }
         }
+
+         /* Color Picker Hover */
         .color:hover {
-					border-color: #4a90e2;
-				}
+          border-color: #4a90e2;
+        }
       }
 
+      /* =========================
+         Button Toolbar
+      ========================= */
       .btn-toolbar {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         gap: 8px;
 
+         /* Toolbar Buttons */
         button {
           background: #fff;
           border: 1px solid #e0e0e0;
@@ -112,12 +148,17 @@ body {
           color: #333;
           transition: all 0.2s ease;
         }
+
+        /* Button Hover Effect */
         button:hover {
-					border-color: #4a90e2;
-				}
+          border-color: #4a90e2;
+        }
       }
     }
 
+     /* =========================
+       Editable Content Area
+    ========================= */
     #content {
       padding: 24px;
       outline: none;
@@ -131,8 +172,11 @@ body {
   }
 }
 
+/* =========================
+   Active State For Show Code Button
+========================= */
 #show-code[data-active="true"] {
-	background: #4a90e2;
-	color: white;
-	border-color: #4a90e2;
+  background: #4a90e2;
+  color: white;
+  border-color: #4a90e2;
 }
