@@ -68,7 +68,7 @@ git clone https://github.com/Sampada-12/rich-text-editor-js.git
 
 ## Live Demo
 
-https://famous-begonia-a28641.netlify.app/
+https://rich-text-editor-js.netlify.app/
 
 ## Author
 
